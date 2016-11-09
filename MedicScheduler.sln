@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.DataModel", "MS.DataModel\MS.DataModel.csproj", "{0C08DDC5-32EE-4B9E-AEE2-84FA619B6D77}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.WpfClient", "MS.WpfClient\MS.WpfClient.csproj", "{B196750F-2270-4DE7-B94C-9889B43EDAAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.DataGenerator", "MS.DataGenerator\MS.DataGenerator.csproj", "{C33B3715-4E44-49FC-A060-983146423225}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B196750F-2270-4DE7-B94C-9889B43EDAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B196750F-2270-4DE7-B94C-9889B43EDAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B196750F-2270-4DE7-B94C-9889B43EDAAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33B3715-4E44-49FC-A060-983146423225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33B3715-4E44-49FC-A060-983146423225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33B3715-4E44-49FC-A060-983146423225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33B3715-4E44-49FC-A060-983146423225}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

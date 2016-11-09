@@ -16,16 +16,7 @@ namespace MS.WpfClient
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            using(MedicSchedulerContext context = new MedicSchedulerContext())
-            {
-                Patient patient1 = new Patient {PolicyId = 1,Name = "Ivan", Surname = "Ivanov",BirthDate = new DateTime(1950,5,6)};
-                Patient patient2 = new Patient { PolicyId = 2, Name = "Alex", Surname = "Alexeev", BirthDate = new DateTime(1985, 11, 26) };
-
-                // добавляем их в бд
-                context.Patients.Add(patient1);
-                context.Patients.Add(patient2);
-                context.SaveChanges();
-            }
+           
         }
     }
 }
