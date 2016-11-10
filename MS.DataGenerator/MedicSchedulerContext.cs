@@ -22,5 +22,6 @@ namespace MS.DataGenerator
         public DbSet<Doctor> Doctors { get; set; }
 
         public DbSet<Speciality> Specialties { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
     }
 }

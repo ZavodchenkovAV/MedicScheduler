@@ -27,5 +27,9 @@ namespace MS.DataModel
 
         [StringLength(2000)]
         public string Text { get; set; }
+        public override string ToString()
+        {
+            return $"Patient:{Patient.Surname},{Patient.Name},Doctor:{Doctor.Surname},{Doctor.Speciality.Name},ReceptionTime: {ReceptionTime}";
+        }
     }
 }
