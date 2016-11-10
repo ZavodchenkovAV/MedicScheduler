@@ -16,7 +16,6 @@ namespace MS.WpfClient
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-           
         }
     }
 }

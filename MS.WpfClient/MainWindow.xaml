@@ -4,12 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MS.WpfClient"
-        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" x:Class="MS.WpfClient.MainWindow"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:DataModel="clr-namespace:MS.DataModel;assembly=MS.DataModel" x:Class="MS.WpfClient.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:AppointmentViewModel/>
+    </Window.DataContext>
     <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="487*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
 
-        <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding Appointments}"  >
             <dxg:GridControl.View>
                 <dxg:TableView AllowPerPixelScrolling="True" ShowTotalSummary="True"/>
             </dxg:GridControl.View>
