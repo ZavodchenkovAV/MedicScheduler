@@ -14,6 +14,8 @@ namespace MS.DataModel
         [ForeignKey("SpecialityId")]
         public Speciality Speciality { get; set; }
 
+        public byte[] Photo { get; set; }
+
         public virtual ICollection<Appointment> Appointments { get; set; }
 
         public override string ToString()
