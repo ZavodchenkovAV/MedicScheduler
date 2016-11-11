@@ -1,16 +1,19 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using MS.DataModel;
 
 namespace MS.WpfClient
 {
-    public class AppointmentViewModel 
+    public class MainViewModel 
     {      
-        public AppointmentViewModel()
+        public MainViewModel()
         {
             using (MedicSchedulerContext context = new MedicSchedulerContext())
             {
@@ -24,5 +27,6 @@ namespace MS.WpfClient
         public List<Patient> Patients { get; set; }
 
         public List<Doctor> Doctors { get; set; }
+    
     }
 }

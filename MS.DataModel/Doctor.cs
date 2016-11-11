@@ -20,7 +20,7 @@ namespace MS.DataModel
 
         public override string ToString()
         {
-            return $"Surname:{Surname},Name:{Name},Speciality: {Speciality.Name}";
+            return $"Surname:{Surname},Name:{Name},Speciality: {Speciality?.Name}";
         }
     }
 }

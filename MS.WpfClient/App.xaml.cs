@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -16,6 +18,8 @@ namespace MS.WpfClient
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+            //Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
         }
     }
 }
