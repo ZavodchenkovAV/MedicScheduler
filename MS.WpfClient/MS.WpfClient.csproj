@@ -56,6 +56,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -121,6 +122,10 @@
     <ProjectReference Include="..\MS.DataModel\MS.DataModel.csproj">
       <Project>{0c08ddc5-32ee-4b9e-aee2-84fa619b6d77}</Project>
       <Name>MS.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MS.ServiceContracts\MS.ServiceContracts.csproj">
+      <Project>{12668cbf-901c-4653-b99a-807b53024d5b}</Project>
+      <Name>MS.ServiceContracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
