@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MS.DataModel;
 
-namespace MS.WpfClient
+namespace MS.ServiceHost
 {
     public class MedicSchedulerContext : DbContext
     {

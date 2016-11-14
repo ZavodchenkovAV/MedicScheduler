@@ -12,7 +12,11 @@ namespace MS.ServiceHost
     {
         public List<Appointment> GetAppointmentsByPatient(long? patientId)
         {
-            return null;
+            using (MedicSchedulerContext context = new MedicSchedulerContext())
+            {
+                return patientId.HasValue? context.Appointments.Where(a=>a.PatientId ==patientId.Value).ToList()
+                    : context.Appointments.ToList();
+            }
         }
     }
 }
