@@ -15,10 +15,10 @@ namespace MS.ServiceHost
             :base("MSConnection")
         { }
 
-        public DbSet<Patient> Patients { get; set; }
-        public DbSet<Doctor> Doctors { get; set; }
+        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<Doctor> Doctors { get; set; }
 
-        public DbSet<Speciality> Specialties { get; set; }
-        public DbSet<Appointment> Appointments { get; set; }
+        public virtual DbSet<Speciality> Specialties { get; set; }
+        public virtual DbSet<Appointment> Appointments { get; set; }
     }
 }

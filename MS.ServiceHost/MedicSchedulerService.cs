@@ -1,6 +1,7 @@
 ﻿using MS.DataModel;
 using MS.ServiceContracts;
 using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +15,12 @@ namespace MS.ServiceHost
         {
             using (MedicSchedulerContext context = new MedicSchedulerContext())
             {
-                return patientId.HasValue? context.Appointments.Where(a=>a.PatientId ==patientId.Value).ToList()
-                    : context.Appointments.ToList();
+                var query = context.Appointments
+                    .Include(x => x.Patient)
+                    .Include(x=>x.Doctor);
+
+                return patientId.HasValue? query.Where(a=>a.PatientId == patientId.Value).ToList()
+                    : query.ToList();
             }
         }
     }
