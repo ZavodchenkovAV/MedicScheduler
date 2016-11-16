@@ -10,7 +10,7 @@ using System.Runtime.Serialization;
 
 namespace MS.DataModel
 {
-    [DataContract]
+    [DataContract(IsReference = true)]
     public abstract class Person
     {
         [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]

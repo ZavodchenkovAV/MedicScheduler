@@ -10,7 +10,7 @@ using System.Runtime.Serialization;
 
 namespace MS.DataModel
 {
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class Appointment
     {
         [Key]
@@ -23,7 +23,7 @@ namespace MS.DataModel
         public long PatientId { get; set; }
 
         [ForeignKey("PatientId")]
-        [Browsable(false)]
+        //[Browsable(false)]
         [DataMember]
         public Patient Patient { get; set; }
 
@@ -33,6 +33,7 @@ namespace MS.DataModel
 
         [ForeignKey("DoctorId")]
         [Browsable(false)]
+        [DataMember]
         public Doctor Doctor { get; set; }
 
         [Display(Name = "ReceptionTime", ResourceType = typeof(Properties.Resources))]

@@ -8,16 +8,20 @@ using System.Runtime.Serialization;
 
 namespace MS.DataModel
 {
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class Doctor:Person
     {
+        [DataMember]
         public long? SpecialityId { get; set; }
 
         [ForeignKey("SpecialityId")]
+        [DataMember]
         public Speciality Speciality { get; set; }
 
+        [DataMember]
         public byte[] Photo { get; set; }
 
+        [DataMember]
         public virtual ICollection<Appointment> Appointments { get; set; }
 
         public override string ToString()

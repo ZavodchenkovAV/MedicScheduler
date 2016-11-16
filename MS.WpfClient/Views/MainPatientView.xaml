@@ -3,16 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MS.WpfClient"
-        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:DataModel="clr-namespace:MS.DataModel;assembly=MS.DataModel" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-    x:Class="MS.WpfClient.MainWindow"
+    xmlns:models="clr-namespace:MS.WpfClient.Models"
+    x:Class="MS.WpfClient.Views.MainPatientView"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="511.837">
+        Title="MainWindow" Height="350" Width="511.837" Loaded="MainPatientView_OnLoaded">
    
     <Window.DataContext>
-        <local:MainViewModel/>
+        <models:MainPatientViewModel />
     </Window.DataContext>
     <Grid >
         <Grid.ColumnDefinitions>
@@ -39,6 +39,7 @@
                             <dxg:LookUpEditSettings ItemsSource="{Binding Doctors}" DisplayMember="Surname" ValueMember="Id"/>
                         </dxg:GridColumn.EditSettings>
                     </dxg:GridColumn>
+                    <dxg:GridColumn FieldName="Doctor.Name" IsSmart="True"/>
                     <dxg:GridColumn FieldName="Text" IsSmart="True" Visible="False"/>
                 </dxg:GridControl.Columns>
                 <dxg:GridControl.View>
