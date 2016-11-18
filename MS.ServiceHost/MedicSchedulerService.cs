@@ -18,7 +18,8 @@ namespace MS.ServiceHost
                 context.Configuration.ProxyCreationEnabled = false;
                 var query = context.Appointments
                     .Include(x => x.Patient)
-                    .Include(x => x.Doctor);
+                    .Include(x => x.Doctor)
+                    .Include(x => x.Doctor.Speciality);
 
                 return patientId.HasValue? query.Where(a=>a.PatientId == patientId.Value).ToList()
                     : query.ToList();

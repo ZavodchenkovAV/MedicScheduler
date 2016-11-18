@@ -61,6 +61,15 @@ namespace MS.DataModel.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AppointmentId.
+        /// </summary>
+        public static string AppointmentId {
+            get {
+                return ResourceManager.GetString("AppointmentId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Doctor.
         /// </summary>
         public static string Doctor {
@@ -79,6 +88,15 @@ namespace MS.DataModel.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ReceptionDate.
+        /// </summary>
+        public static string ReceptionDate {
+            get {
+                return ResourceManager.GetString("ReceptionDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ReceptionText.
         /// </summary>
         public static string ReceptionText {
@@ -93,6 +111,15 @@ namespace MS.DataModel.Properties {
         public static string ReceptionTime {
             get {
                 return ResourceManager.GetString("ReceptionTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speciality.
+        /// </summary>
+        public static string Speciality {
+            get {
+                return ResourceManager.GetString("Speciality", resourceCulture);
             }
         }
     }

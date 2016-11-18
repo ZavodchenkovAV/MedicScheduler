@@ -25,11 +25,5 @@ namespace MS.WpfClient.Views
         {
             InitializeComponent();
         }
-
-        private void MainPatientView_OnLoaded(object sender, RoutedEventArgs e)
-        {
-            var model = DataContext as MainPatientViewModel;
-            model.InitRunTime();
-        }
     }
 }

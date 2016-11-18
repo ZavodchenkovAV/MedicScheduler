@@ -117,16 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppointmentId" xml:space="preserve">
+    <value>Номер записи</value>
+  </data>
   <data name="Doctor" xml:space="preserve">
     <value>Врач</value>
   </data>
   <data name="Patient" xml:space="preserve">
     <value>Пациент</value>
   </data>
+  <data name="ReceptionDate" xml:space="preserve">
+    <value>Дата приёма</value>
+  </data>
   <data name="ReceptionText" xml:space="preserve">
     <value>Результат приёма</value>
   </data>
   <data name="ReceptionTime" xml:space="preserve">
     <value>Время приёма</value>
+  </data>
+  <data name="Speciality" xml:space="preserve">
+    <value>Специальность</value>
   </data>
 </root>

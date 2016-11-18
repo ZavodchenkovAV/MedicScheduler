@@ -14,7 +14,11 @@ namespace MS.DataModel
     {
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DataMember]
         public long Id { get; set; }
+
+        [Display(Name = "Speciality", ResourceType = typeof(Properties.Resources))]
+        [DataMember]
 
         public string Name { get; set; }
     }

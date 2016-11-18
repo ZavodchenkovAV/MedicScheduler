@@ -16,6 +16,7 @@ namespace MS.DataModel
         [Key]
         [Browsable(false)]
         [DataMember]
+        [Display(Name = "AppointmentId", ResourceType = typeof(Properties.Resources))]
         public long AppointmentId { get; set; }
 
         [Display(Name = "Patient", ResourceType = typeof(Properties.Resources))]
@@ -36,9 +37,8 @@ namespace MS.DataModel
         [DataMember]
         public Doctor Doctor { get; set; }
 
-        [Display(Name = "ReceptionTime", ResourceType = typeof(Properties.Resources))]
         [DataMember]
-        public DateTime ReceptionTime { get; set; }
+        public DateTime ReceptionDateTime { get; set; }
 
         [StringLength(2000)]
         [Display(Name = "ReceptionText", ResourceType = typeof(Properties.Resources))]
@@ -46,7 +46,7 @@ namespace MS.DataModel
         public string Text { get; set; }
         public override string ToString()
         {
-            return $"Patient:{Patient.Surname},{Patient.Name},Doctor:{Doctor.Surname},{Doctor.Speciality.Name},ReceptionTime: {ReceptionTime}";
+            return $"Patient:{Patient.Surname},{Patient.Name},Doctor:{Doctor.Surname},{Doctor.Speciality.Name},ReceptionTime: {ReceptionDateTime}";
         }
     }
 }

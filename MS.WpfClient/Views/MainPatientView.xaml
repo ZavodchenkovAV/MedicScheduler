@@ -9,10 +9,9 @@
     xmlns:models="clr-namespace:MS.WpfClient.Models"
     x:Class="MS.WpfClient.Views.MainPatientView"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="511.837" Loaded="MainPatientView_OnLoaded">
-   
+        Title="MainWindow" Height="350" Width="511.837">
     <Window.DataContext>
-        <models:MainPatientViewModel />
+        <models:MainPatientViewModel/>
     </Window.DataContext>
     <Grid >
         <Grid.ColumnDefinitions>
@@ -24,26 +23,22 @@
         <dxlc:LayoutControl Grid.ColumnSpan="3" >
             <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" ItemsSource="{Binding Appointments}" DesignTimeDataObjectType="{Binding Appointments}" >
                 <dxg:GridControl.Columns>
-                    <dxg:GridColumn FieldName="ReceptionTime" IsSmart="True" >
+                    <dxg:GridColumn FieldName="AppointmentId" IsSmart="True"/>
+                    <dxg:GridColumn FieldName="ReceptionDate" IsSmart="True">
                         <dxg:GridColumn.EditSettings>
-                            <dxe:DateEditSettings Mask="yyyy-MM-dd HH-mm" MaskUseAsDisplayFormat="True"/>
+                            <dxe:DateEditSettings Mask="yyyy-MM-dd" MaskUseAsDisplayFormat="True"/>
                         </dxg:GridColumn.EditSettings>
                     </dxg:GridColumn>
-                    <dxg:GridColumn FieldName="PatientId" IsSmart="True">
+                    <dxg:GridColumn FieldName="ReceptionTime" IsSmart="True">
                         <dxg:GridColumn.EditSettings>
-                            <dxg:LookUpEditSettings ItemsSource="{Binding Patients}" DisplayMember="Surname" ValueMember="Id"/>
+                            <dxe:DateEditSettings Mask="HH-mm" MaskUseAsDisplayFormat="True"/>
                         </dxg:GridColumn.EditSettings>
                     </dxg:GridColumn>
-                    <dxg:GridColumn FieldName="DoctorId" IsSmart="True">
-                        <dxg:GridColumn.EditSettings>
-                            <dxg:LookUpEditSettings ItemsSource="{Binding Doctors}" DisplayMember="Surname" ValueMember="Id"/>
-                        </dxg:GridColumn.EditSettings>
-                    </dxg:GridColumn>
-                    <dxg:GridColumn FieldName="Doctor.Name" IsSmart="True"/>
-                    <dxg:GridColumn FieldName="Text" IsSmart="True" Visible="False"/>
+                    <dxg:GridColumn FieldName="Speciality" IsSmart="True"/>
+                    <dxg:GridColumn FieldName="DoctorFullName" IsSmart="True"/>
                 </dxg:GridControl.Columns>
                 <dxg:GridControl.View>
-                    <dxg:TableView AllowPerPixelScrolling="True" ShowTotalSummary="True"/>
+                    <dxg:TableView ShowTotalSummary="True"/>
                 </dxg:GridControl.View>
             </dxg:GridControl>
         </dxlc:LayoutControl>

@@ -121,7 +121,7 @@ namespace MS.DataGenerator
                 {
                     Patient = context.Patients.Local.ElementAtOrDefault(rand.Next(pcount - 1)),
                     Doctor = context.Doctors.Local.ElementAtOrDefault(rand.Next(pdoctor - 1)),
-                    ReceptionTime = new DateTime(date.Year,date.Month,date.Day,rand.Next(8,20),rand.Next(1,60),0) 
+                    ReceptionDateTime = new DateTime(date.Year,date.Month,date.Day,rand.Next(8,20),rand.Next(1,60),0) 
                 };
                 context.Appointments.Add(app);
                 Console.WriteLine($"Appointment {i}:{app}");

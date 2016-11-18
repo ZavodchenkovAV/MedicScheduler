@@ -75,6 +75,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\AppointmentViewModel.cs" />
     <Compile Include="Views\MainPatientView.xaml.cs">
       <DependentUpon>MainPatientView.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -3,6 +3,7 @@ using System.ServiceModel;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Windows;
 using MS.DataModel;
 using MS.ServiceContracts;
 
@@ -12,13 +13,11 @@ namespace MS.WpfClient.Models
     {      
         public MainPatientViewModel()
         {
-            //DesignerProperties.GetIsInDesignMode(this))
-                //Patients = context.Patients.ToList();
-                //Doctors = context.Doctors.ToList();
-                //InitDesignTime();
+            if(!DesignerProperties.GetIsInDesignMode(new DependencyObject()))
+                InitRunTime();
         }
        
-        public List<Appointment> Appointments { get; set; }
+        public List<AppointmentViewModel> Appointments { get; set; }
 
         public void InitRunTime()
         {
@@ -27,13 +26,8 @@ namespace MS.WpfClient.Models
             BasicHttpBinding binding = new BasicHttpBinding("basicHttp");
             ChannelFactory<IMedicSchedulerService> factory = new ChannelFactory<IMedicSchedulerService>(binding, address);
             IMedicSchedulerService service = factory.CreateChannel();
-            Appointments = service.GetAppointmentsByPatient(null);
+            Appointments = service.GetAppointmentsByPatient(null).Select(a=>new AppointmentViewModel(a)).ToList();
         }
-
-        public void InitDesignTime()
-        {
-            Appointments = new List<Appointment>() {new Appointment() {ReceptionTime = DateTime.Now,Doctor = new Doctor() {Name = "sdfsdf"} } };
-        }
-    
     }
+   
 }
