@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.DataModel", "MS.DataModel\MS.DataModel.csproj", "{0C08DDC5-32EE-4B9E-AEE2-84FA619B6D77}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.ServiceContracts", "MS.ServiceContracts\MS.ServiceContracts.csproj", "{12668CBF-901C-4653-B99A-807B53024D5B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.ServiceHost", "MS.ServiceHost\MS.ServiceHost.csproj", "{4526080D-5B85-4DCA-A32D-D4F6514F0D3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.WcfServiceHost", "MS.WcfServiceHost\MS.WcfServiceHost.csproj", "{0D80BA73-C1D8-4A53-8EDE-FE48C61A0E9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{4526080D-5B85-4DCA-A32D-D4F6514F0D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4526080D-5B85-4DCA-A32D-D4F6514F0D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4526080D-5B85-4DCA-A32D-D4F6514F0D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D80BA73-C1D8-4A53-8EDE-FE48C61A0E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D80BA73-C1D8-4A53-8EDE-FE48C61A0E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D80BA73-C1D8-4A53-8EDE-FE48C61A0E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D80BA73-C1D8-4A53-8EDE-FE48C61A0E9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

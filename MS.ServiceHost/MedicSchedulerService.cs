@@ -11,6 +11,8 @@ namespace MS.ServiceHost
 {
     public class MedicSchedulerService: IMedicSchedulerService
     {
+       
+
         public List<Appointment> GetAppointmentsByPatient(long? patientId)
         {
             using (MedicSchedulerContext context = new MedicSchedulerContext())
@@ -25,5 +27,7 @@ namespace MS.ServiceHost
                     : query.ToList();
             }
         }
+
+       
     }
 }

@@ -70,6 +70,15 @@ namespace MS.DataModel.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Appointments.
+        /// </summary>
+        public static string Appointments {
+            get {
+                return ResourceManager.GetString("Appointments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Doctor.
         /// </summary>
         public static string Doctor {

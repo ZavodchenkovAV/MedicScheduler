@@ -120,6 +120,9 @@
   <data name="AppointmentId" xml:space="preserve">
     <value>Номер записи</value>
   </data>
+  <data name="Appointments" xml:space="preserve">
+    <value>Записи</value>
+  </data>
   <data name="Doctor" xml:space="preserve">
     <value>Врач</value>
   </data>

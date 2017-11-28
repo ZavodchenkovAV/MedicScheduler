@@ -7,6 +7,7 @@
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:models="clr-namespace:MS.WpfClient.Models"
+    xmlns:res="clr-namespace:MS.DataModel.Properties;assembly=MS.DataModel"
     x:Class="MS.WpfClient.Views.MainPatientView"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="511.837">
@@ -20,27 +21,45 @@
             <ColumnDefinition Width="31*"/>
         </Grid.ColumnDefinitions>
 
-        <dxlc:LayoutControl Grid.ColumnSpan="3" >
-            <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" ItemsSource="{Binding Appointments}" DesignTimeDataObjectType="{Binding Appointments}" >
-                <dxg:GridControl.Columns>
-                    <dxg:GridColumn FieldName="AppointmentId" IsSmart="True"/>
-                    <dxg:GridColumn FieldName="ReceptionDate" IsSmart="True">
-                        <dxg:GridColumn.EditSettings>
-                            <dxe:DateEditSettings Mask="yyyy-MM-dd" MaskUseAsDisplayFormat="True"/>
-                        </dxg:GridColumn.EditSettings>
-                    </dxg:GridColumn>
-                    <dxg:GridColumn FieldName="ReceptionTime" IsSmart="True">
-                        <dxg:GridColumn.EditSettings>
-                            <dxe:DateEditSettings Mask="HH-mm" MaskUseAsDisplayFormat="True"/>
-                        </dxg:GridColumn.EditSettings>
-                    </dxg:GridColumn>
-                    <dxg:GridColumn FieldName="Speciality" IsSmart="True"/>
-                    <dxg:GridColumn FieldName="DoctorFullName" IsSmart="True"/>
-                </dxg:GridControl.Columns>
-                <dxg:GridControl.View>
-                    <dxg:TableView ShowTotalSummary="True"/>
-                </dxg:GridControl.View>
-            </dxg:GridControl>
+        <dxlc:LayoutControl Grid.ColumnSpan="3" Orientation="Vertical" >
+
+            <dxlc:LayoutGroup Header="{x:Static res:Resources.Patient}" View="GroupBox">
+                <dxlc:LayoutItem Label="LayoutItem 2:" VerticalAlignment="Top" >
+                    <dxe:TextEdit IsReadOnly="True"/>
+                    </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="LayoutItem 3:" VerticalAlignment="Top" >
+                    <dxe:TextEdit IsReadOnly="True"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="LayoutItem 4:" VerticalAlignment="Top" >
+                    <dxe:TextEdit IsReadOnly="True"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+            <dxlc:LayoutGroup Orientation="Vertical" Header="{x:Static res:Resources.Appointments}" View="GroupBox"  >
+                <dxlc:LayoutItem IsRequired="True" LabelVerticalAlignment="Top" LabelHorizontalAlignment="Center" >
+                    <dxg:GridControl AutoGenerateColumns="AddNew" VerticalAlignment="Stretch" EnableSmartColumnsGeneration="True" ItemsSource="{Binding Appointments}" DesignTimeDataObjectType="{Binding Appointments}" Height="300">
+                        <dxg:GridControl.Columns>
+                            <dxg:GridColumn FieldName="AppointmentId" IsSmart="True"/>
+                            <dxg:GridColumn FieldName="ReceptionDate" IsSmart="True">
+                                <dxg:GridColumn.EditSettings>
+                                    <dxe:DateEditSettings Mask="yyyy-MM-dd" MaskUseAsDisplayFormat="True"/>
+                                </dxg:GridColumn.EditSettings>
+                            </dxg:GridColumn>
+                            <dxg:GridColumn FieldName="ReceptionTime" IsSmart="True">
+                                <dxg:GridColumn.EditSettings>
+                                    <dxe:DateEditSettings Mask="HH-mm" MaskUseAsDisplayFormat="True"/>
+                                </dxg:GridColumn.EditSettings>
+                            </dxg:GridColumn>
+                            <dxg:GridColumn FieldName="Speciality" IsSmart="True"/>
+                            <dxg:GridColumn FieldName="DoctorFullName" IsSmart="True"/>
+                        </dxg:GridControl.Columns>
+                        <dxg:GridControl.View>
+                            <dxg:TableView ShowTotalSummary="True"/>
+                        </dxg:GridControl.View>
+                    </dxg:GridControl>
+
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
         </dxlc:LayoutControl>
 
     </Grid>

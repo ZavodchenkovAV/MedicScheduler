@@ -49,4 +49,13 @@ namespace MS.DataModel
             return $"Patient:{Patient.Surname},{Patient.Name},Doctor:{Doctor.Surname},{Doctor.Speciality.Name},ReceptionTime: {ReceptionDateTime}";
         }
     }
+    [DataContract]
+    public class Message
+    {
+        [DataMember]
+        public string Header { get; set; }
+
+        [DataMember]
+        public string Body { get; set; }
+    }
 }
